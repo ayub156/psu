@@ -305,7 +305,6 @@ class AppTheme {
         primary: primaryColor,
         secondary: secondaryColor,
         surface: const Color(0xFF0F172A),
-        background: const Color(0xFF0F172A),
         error: errorColor,
       ),
       textTheme: GoogleFonts.interTextTheme(ThemeData.dark().textTheme).copyWith(

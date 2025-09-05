@@ -94,7 +94,7 @@ class SupabaseService {
       }
     } catch (e) {
       // Log error but don't throw - this is a fallback mechanism
-      print('Warning: Could not ensure teacher record: $e');
+      // Warning: Could not ensure teacher record: $e
     }
   }
 
