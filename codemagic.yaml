@@ -3,8 +3,6 @@ workflows:
     name: PSU Attendance Android
     max_build_duration: 60
     environment:
-      android_signing:
-        - keystore_reference
       groups:
         - google_play
       vars:
@@ -43,10 +41,6 @@ workflows:
         notify:
           success: true
           failure: false
-      google_play:
-        credentials: $GCLOUD_SERVICE_ACCOUNT_CREDENTIALS
-        track: $GOOGLE_PLAY_TRACK
-        submit_as_draft: true
 
   psu-attendance-ios:
     name: PSU Attendance iOS
@@ -91,7 +85,9 @@ workflows:
       - /tmp/xcodebuild_logs/*.log
       - flutter_drive.log
     publishing:
-      app_store_connect:
-        auth: integration
-        submit_to_testflight: true
-        submit_to_app_store: false
+      email:
+        recipients:
+          - ayub156@example.com
+        notify:
+          success: true
+          failure: false
